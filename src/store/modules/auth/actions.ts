@@ -1,18 +1,5 @@
 import * as typesActions from './types';
-
-export type AuthParams = {
-    email: string;
-    password: string;
-}
-
-export type UserType = {
-    email: string,
-    name: string,
-    token: string
-    genre: string,
-    active: boolean,
-    age: number,
-}
+import { AuthParams, UserType } from "./types";
 
 export const authUserRequest = (params: AuthParams) => {
     return {

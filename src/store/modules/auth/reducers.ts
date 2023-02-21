@@ -1,17 +1,5 @@
-import { AuthParams, UserType } from "./actions";
 import * as typesActions from './types';
-
-type UserState = {
-    user: UserType | null;
-    loading: boolean;
-    success: boolean;
-    error: string;
-}
-
-export type AuthAction = {
-    type: string;
-    payload?: AuthParams;
-}
+import { UserState, AuthAction } from './types';
 
 const initialState = {
     user: null,

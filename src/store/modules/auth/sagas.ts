@@ -1,14 +1,9 @@
 import * as typesActions from './types';
-import { authUserFailure, authUserSuccess, UserType } from "./actions";
-import { AuthAction } from './reducers';
+import { AuthAction, UserType } from './types';
 import { call, put, all, takeLatest } from 'redux-saga/effects';
+import { authUserFailure, authUserSuccess } from "./actions";
 
 let user: UserType | null = null;
-
-type Params = {
-    email: string;
-    password: string;
-}
 
 const userRequest = async (action: Pick<AuthAction, 'payload'>) => {
     //Do request with autentication link 
